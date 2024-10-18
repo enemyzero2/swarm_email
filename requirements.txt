@@ -1,0 +1,5 @@
+keyboard==0.13.5
+openai==1.52.0
+PyAutoGUI==0.9.54
+pydantic==2.9.2
+streamlit==1.32.0
