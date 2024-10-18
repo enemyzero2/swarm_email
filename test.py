@@ -17,7 +17,7 @@ swarm_client = Swarm(client)
 def run_agent_conversion():
     response = swarm_client.run(
         agent = agent_b,
-        messages = [{"role":"user","content":"看一下现在是什么时间，然后给我发送邮件问候我。（早上好？中午好？晚上好？）问候内容30字左右"}],
+        messages = [{"role":"user","content":"看一下现在是什么时间，然后给我发送邮件问候我。问候内容详细，温柔一点，附带对应时间的问候语，例如晚上就说晚上好，早上就说早上好，然后关心一下我的近况啥啥的。总之怎么可爱怎么来。"}],
     )
 
     print(response.messages[-1]["content"]) 

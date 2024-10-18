@@ -17,7 +17,7 @@ def transfer_to_agent_d():
     return agent_d
 
 def get_time_now():
-    return datetime.datetime.now()
+    return datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
 
 agent_a = Agent(
     name='agent_a',
