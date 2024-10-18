@@ -1,0 +1,30 @@
+name: Schedule app.py
+
+# 定义事件：使用 cron 定时任务，每天运行三次
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 代表 UTC 的早上8点（北京时间）
+    - cron: '0 4 * * *'  # 代表 UTC 的中午12点（北京时间）
+    - cron: '0 15 * * *'  # 代表 UTC 的晚上11点（北京时间）
+
+jobs:
+  run-app:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 环境
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # 克隆你的仓库
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # 指定你的 Python 版本
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # 安装依赖
+
+      - name: Run app.py
+        run: |
+          python app.py  # 启动你的 Python 应用
