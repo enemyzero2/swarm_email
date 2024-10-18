@@ -2,11 +2,12 @@ name: Schedule app.py
 
 # 定义事件：使用 cron 定时任务，每天运行三次
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'  # 代表 UTC 的早上8点（北京时间）
     - cron: '0 4 * * *'  # 代表 UTC 的中午12点（北京时间）
     - cron: '0 15 * * *'  # 代表 UTC 的晚上11点（北京时间）
-
+    - cron: '53 10 * * *'  # 代表 UTC 的 10:51，即北京时间的 18:51
 jobs:
   run-app:
     runs-on: ubuntu-latest  # 使用最新的 Ubuntu 环境
