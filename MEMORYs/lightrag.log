@@ -1,0 +1,157 @@
+2024-10-20 14:47:10,404 - lightrag - INFO - Logger initialized for working directory: ./MEMORYs
+2024-10-20 14:47:10,404 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./MEMORYs,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 1536, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 1536, 'max_token_size': 8192, 'func': <function openai_embedding at 0x000001D43E223740>},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function gpt_4o_mini_complete at 0x000001D43E223100>,
+  llm_model_name = meta-llama/Llama-3.2-1B-Instruct,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 16,
+  key_string_value_json_storage_cls = <class 'lightrag.storage.JsonKVStorage'>,
+  vector_db_storage_cls = <class 'lightrag.storage.NanoVectorDBStorage'>,
+  vector_db_storage_cls_kwargs = {},
+  graph_storage_cls = <class 'lightrag.storage.NetworkXStorage'>,
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x000001D43E220A40>
+
+2024-10-20 14:47:10,406 - lightrag - INFO - Load KV full_docs with 0 data
+2024-10-20 14:47:10,407 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-10-20 14:47:10,407 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-10-20 14:47:53,384 - lightrag - INFO - Logger initialized for working directory: ./MEMORYs
+2024-10-20 14:47:53,384 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./MEMORYs,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 1536, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 1536, 'max_token_size': 8192, 'func': <function openai_embedding at 0x000001C607F6F6A0>},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function gpt_4o_mini_complete at 0x000001C607F6F060>,
+  llm_model_name = meta-llama/Llama-3.2-1B-Instruct,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 16,
+  key_string_value_json_storage_cls = <class 'lightrag.storage.JsonKVStorage'>,
+  vector_db_storage_cls = <class 'lightrag.storage.NanoVectorDBStorage'>,
+  vector_db_storage_cls_kwargs = {},
+  graph_storage_cls = <class 'lightrag.storage.NetworkXStorage'>,
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x000001C607F6C9A0>
+
+2024-10-20 14:47:53,385 - lightrag - INFO - Load KV full_docs with 0 data
+2024-10-20 14:47:53,385 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-10-20 14:47:53,386 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-10-20 14:52:19,796 - lightrag - INFO - Logger initialized for working directory: ./MEMORYs
+2024-10-20 14:52:19,797 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./MEMORYs,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 1536, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 1536, 'max_token_size': 8192, 'func': <function openai_embedding at 0x0000020E8D7CF740>},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function gpt_4o_mini_complete at 0x0000020E8D7CF100>,
+  llm_model_name = meta-llama/Llama-3.2-1B-Instruct,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 16,
+  key_string_value_json_storage_cls = <class 'lightrag.storage.JsonKVStorage'>,
+  vector_db_storage_cls = <class 'lightrag.storage.NanoVectorDBStorage'>,
+  vector_db_storage_cls_kwargs = {},
+  graph_storage_cls = <class 'lightrag.storage.NetworkXStorage'>,
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x0000020E8D7CCA40>
+
+2024-10-20 14:52:19,797 - lightrag - INFO - Load KV full_docs with 0 data
+2024-10-20 14:52:19,798 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-10-20 14:52:19,798 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-10-20 14:52:19,801 - lightrag - INFO - Creating a new event loop in a sub-thread.
+2024-10-20 14:52:19,802 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-10-20 14:52:23,324 - lightrag - INFO - [New Chunks] inserting 20 chunks
+2024-10-20 14:52:23,325 - lightrag - INFO - Inserting 20 vectors to chunks
+2024-10-20 14:52:31,402 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-10-20 14:57:36,458 - lightrag - INFO - Logger initialized for working directory: ./MEMORYs
+2024-10-20 14:57:36,458 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./MEMORYs,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 1536, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 1536, 'max_token_size': 8192, 'func': <function openai_embedding at 0x0000021F239EF740>},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function gpt_4o_mini_complete at 0x0000021F239EF100>,
+  llm_model_name = meta-llama/Llama-3.2-1B-Instruct,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 16,
+  key_string_value_json_storage_cls = <class 'lightrag.storage.JsonKVStorage'>,
+  vector_db_storage_cls = <class 'lightrag.storage.NanoVectorDBStorage'>,
+  vector_db_storage_cls_kwargs = {},
+  graph_storage_cls = <class 'lightrag.storage.NetworkXStorage'>,
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x0000021F239ECA40>
+
+2024-10-20 14:57:36,460 - lightrag - INFO - Load KV full_docs with 0 data
+2024-10-20 14:57:36,461 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-10-20 14:57:36,461 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-10-20 14:57:36,465 - lightrag - INFO - Loaded graph from ./MEMORYs\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-10-20 14:57:36,466 - lightrag - INFO - Creating a new event loop in a sub-thread.
+2024-10-20 14:57:36,468 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-10-20 14:57:36,788 - lightrag - INFO - [New Chunks] inserting 20 chunks
+2024-10-20 14:57:36,788 - lightrag - INFO - Inserting 20 vectors to chunks
+2024-10-20 14:57:42,861 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
+2024-10-20 15:00:15,414 - lightrag - INFO - Logger initialized for working directory: ./MEMORYs
+2024-10-20 15:00:15,415 - lightrag - DEBUG - LightRAG init with param:
+  working_dir = ./MEMORYs,
+  chunk_token_size = 1200,
+  chunk_overlap_token_size = 100,
+  tiktoken_model_name = gpt-4o-mini,
+  entity_extract_max_gleaning = 1,
+  entity_summary_to_max_tokens = 500,
+  node_embedding_algorithm = node2vec,
+  node2vec_params = {'dimensions': 1536, 'num_walks': 10, 'walk_length': 40, 'window_size': 2, 'iterations': 3, 'random_seed': 3},
+  embedding_func = {'embedding_dim': 1536, 'max_token_size': 8192, 'func': <function openai_embedding at 0x000001F2F6F0B6A0>},
+  embedding_batch_num = 32,
+  embedding_func_max_async = 16,
+  llm_model_func = <function gpt_4o_mini_complete at 0x000001F2F6F0B060>,
+  llm_model_name = meta-llama/Llama-3.2-1B-Instruct,
+  llm_model_max_token_size = 32768,
+  llm_model_max_async = 16,
+  key_string_value_json_storage_cls = <class 'lightrag.storage.JsonKVStorage'>,
+  vector_db_storage_cls = <class 'lightrag.storage.NanoVectorDBStorage'>,
+  vector_db_storage_cls_kwargs = {},
+  graph_storage_cls = <class 'lightrag.storage.NetworkXStorage'>,
+  enable_llm_cache = True,
+  addon_params = {},
+  convert_response_to_json_func = <function convert_response_to_json at 0x000001F2F6F089A0>
+
+2024-10-20 15:00:15,415 - lightrag - INFO - Load KV full_docs with 0 data
+2024-10-20 15:00:15,416 - lightrag - INFO - Load KV text_chunks with 0 data
+2024-10-20 15:00:15,416 - lightrag - INFO - Load KV llm_response_cache with 0 data
+2024-10-20 15:00:15,417 - lightrag - INFO - Loaded graph from ./MEMORYs\graph_chunk_entity_relation.graphml with 0 nodes, 0 edges
+2024-10-20 15:00:15,421 - lightrag - INFO - Creating a new event loop in a sub-thread.
+2024-10-20 15:00:15,422 - lightrag - INFO - [New Docs] inserting 1 docs
+2024-10-20 15:00:15,735 - lightrag - INFO - [New Chunks] inserting 20 chunks
+2024-10-20 15:00:15,736 - lightrag - INFO - Inserting 20 vectors to chunks
+2024-10-20 15:00:21,729 - lightrag - INFO - Writing graph with 0 nodes, 0 edges
