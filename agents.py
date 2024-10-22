@@ -29,7 +29,7 @@ agent_b = Agent(
     name="sydney",
     model=BASE_MODEL,
     instructions=sydney_prompt,
-    functions=[get_time_now,ft.send_email],
+    functions=[get_time_now, ft.send_email],
 )
 
 agent_c = Agent(
@@ -39,10 +39,6 @@ agent_c = Agent(
     functions = []
 )
 
-
-
-
-
-agents = [agent_a, agent_b,agent_c]
+agents = [agent_a, agent_b, agent_c]
 def return_agents():
     return agents
