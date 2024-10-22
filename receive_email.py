@@ -1,6 +1,7 @@
 import poplib
 from email import parser
 from datetime import datetime
+from dateutil import parser as dateutil_parser
 import config
 
 def connect_to_pop3_server():
@@ -28,19 +29,31 @@ def filter_emails_by_date_and_sender(email_list, target_date, target_sender):
     for email in email_list:
         email_date = email['Date']
         email_sender = email['From']
-        email_date = datetime.strptime(email_date, '%a, %d %b %Y %H:%M:%S %z')
+        email_date = dateutil_parser.parse(email_date)  # Automatic parsing
         if email_date.date() == target_date.date() and target_sender in email_sender:
             filtered_emails.append(email)
     return filtered_emails
 
 def extract_email_content(email):
-    return email.get_payload()
+    if email.is_multipart():
+        # 多部分邮件，需要遍历每一部分
+        parts = email.get_payload()
+        content = ""
+        for part in parts:
+            if part.get_content_type() == "text/plain":  # 只提取纯文本部分
+                content += part.get_payload(decode=True).decode(part.get_content_charset('utf-8'))
+        return content.strip()
+    else:
+        # 非多部分邮件，直接解码并返回
+        return email.get_payload(decode=True).decode(email.get_content_charset('utf-8')).strip()
 
 def receive_emails():
     server = connect_to_pop3_server()
     email_list = retrieve_emails(server)
     today = datetime.now()
-    target_sender = 'specified_sender@example.com'
+    target_sender = config.target_sender
     filtered_emails = filter_emails_by_date_and_sender(email_list, today, target_sender)
     email_contents = [extract_email_content(email) for email in filtered_emails]
     return email_contents
+
+
