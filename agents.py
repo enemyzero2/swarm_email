@@ -3,6 +3,8 @@ import datetime
 import functions as ft
 import os
 from receive_email import receive_emails
+from models import CalendarEvent
+from database import add_event_to_db, get_events_from_db
 
 BASE_MODEL = 'gpt-4o-mini'
 
@@ -41,6 +43,19 @@ agent_c = Agent(
     functions = []
 )
 
-agents = [agent_a, agent_b, agent_c]
+def add_event(event: CalendarEvent):
+    add_event_to_db(event)
+
+def get_events():
+    return get_events_from_db()
+
+agent_e = Agent(
+    name="ela",
+    model=BASE_MODEL,
+    instructions="you are agent ela, you are responsible for managing the database. You will track email content and add necessary events and schedules to the database.",
+    functions=[add_event, get_events],
+)
+
+agents = [agent_a, agent_b, agent_c, agent_e]
 def return_agents():
     return agents
