@@ -2,6 +2,8 @@ from swarm import Agent, Swarm
 import datetime
 import functions as ft
 import os
+from receive_email import receive_emails
+
 BASE_MODEL = 'gpt-4o-mini'
 
 #读取本地文件SYDNEY.txt,转换为str:sydney_prompt
@@ -29,7 +31,7 @@ agent_b = Agent(
     name="sydney",
     model=BASE_MODEL,
     instructions=sydney_prompt,
-    functions=[get_time_now, ft.send_email],
+    functions=[get_time_now, ft.send_email, receive_emails],
 )
 
 agent_c = Agent(
