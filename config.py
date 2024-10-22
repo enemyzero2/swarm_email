@@ -7,3 +7,6 @@ sender_password = 'VHeaV389jFjd3cMe'
 recipient_email = '2939827325@qq.com'
 send_subject = 'Sydney'
 send_name = 'Sydney'
+
+API_KEY = 'sk-tOTXaQwfZdAOaVwInPSLeF5lv1Iv1i5hpmpJtILqDgNuVziL'
+BASE_URL = 'https://xdaicn.top/v1'
