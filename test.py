@@ -4,13 +4,9 @@ import os
 from swarm import Swarm, Agent
 import streamlit as st
 from agents import agent_b
+from config import API_KEY, BASE_URL
 sys.path.append('/root/swarm')
 
-API_KEY = 'sk-tOTXaQwfZdAOaVwInPSLeF5lv1Iv1i5hpmpJtILqDgNuVziL'
-BASE_URL = 'https://xdaicn.top/v1'
-
-#API_KEY = 'sk-leijDw1a3T6boFYyP3aJYGgWtb7haYhfsvMwSLVeAcKruADJ'
-#BASE_URL = 'https://api.deepbricks.ai/v1/'
 client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 swarm_client = Swarm(client)
 

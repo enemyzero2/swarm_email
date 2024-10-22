@@ -5,16 +5,7 @@ from email import encoders
 from email.header import Header
 from email.utils import formataddr
 from email.mime.multipart import MIMEMultipart
-
-smtp_server = 'smtp.163.com'
-smtp_port = 25
-
-sender_email = '15239288661@163.com'
-sender_password = 'VHeaV389jFjd3cMe'
-
-recipient_email = '2939827325@qq.com'
-send_subject = 'Sydney'
-send_name = 'Sydney'
+from config import smtp_server, smtp_port, sender_email, sender_password, recipient_email, send_subject, send_name
 
 def send_email(main_text: str, attachments: list = None):
     try:
