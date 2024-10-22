@@ -22,6 +22,19 @@ Private email sender with a touch of fun! 🎉
 1. Run the application: `python app.py` 🚀
 2. Follow the prompts to send your emails with ease! 📧
 
+## 🛠️ New Agent: ela
+
+A new agent named `ela` has been added to manage the database. This agent will track email content and add necessary events and schedules to the database.
+
+## 🛠️ Configuring MySQL Database Connection
+
+To configure the MySQL database connection, add the following environment variables to your configuration:
+
+- `MYSQL_HOST`: The hostname of your MySQL server
+- `MYSQL_USER`: The username to connect to the MySQL server
+- `MYSQL_PASSWORD`: The password to connect to the MySQL server
+- `MYSQL_DB`: The name of the database to use
+
 ## 🤝 Contributing Guidelines
 
 We welcome contributions! Feel free to open issues or submit pull requests. Let's make this project even better together! 🌟
