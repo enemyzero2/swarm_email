@@ -1,6 +1,15 @@
 # 📧 swarm_email 🐝
 
+![Build Status](https://img.shields.io/github/workflow/status/enemyzero2/swarm_email/CI) ![License](https://img.shields.io/github/license/enemyzero2/swarm_email) ![Dependencies](https://img.shields.io/librariesio/github/enemyzero2/swarm_email)
+
 Private email sender with a touch of fun! 🎉
+
+## ✨ Features
+
+- Send personalized emails with ease 📧
+- Schedule emails to be sent at specific times ⏰
+- Add attachments to your emails 📎
+- Use OpenAI's API to generate email content 🤖
 
 ## 🚀 Installation Instructions
 
