@@ -6,7 +6,7 @@ import streamlit as st
 from agents import agent_b
 sys.path.append('/root/swarm')
 
-API_KEY = 'sk-BPv3we5kZVzAGA4SJ3mBYZQuzNAHB47iLTr78s7OA4VE1ujW'
+API_KEY = 'sk-tOTXaQwfZdAOaVwInPSLeF5lv1Iv1i5hpmpJtILqDgNuVziL'
 BASE_URL = 'https://xdaicn.top/v1'
 
 #API_KEY = 'sk-leijDw1a3T6boFYyP3aJYGgWtb7haYhfsvMwSLVeAcKruADJ'
