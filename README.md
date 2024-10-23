@@ -1,6 +1,5 @@
 # 📧 swarm_email 🐝
 
-![Build Status](https://img.shields.io/github/workflow/status/enemyzero2/swarm_email/CI) ![License](https://img.shields.io/github/license/enemyzero2/swarm_email) ![Dependencies](https://img.shields.io/librariesio/github/enemyzero2/swarm_email)
 
 Private email sender with a touch of fun! 🎉
 
@@ -16,11 +15,13 @@ Private email sender with a touch of fun! 🎉
 1. Clone the repository: `git clone https://github.com/enemyzero2/swarm_email.git` 🐙
 2. Navigate to the project directory: `cd swarm_email` 📂
 3. Install the dependencies: `pip install -r requirements.txt` 📦
+4. set your own SMTP,POP3 and OPENAI_API_KEY in the config.py !
 
 ## 🛠️ Usage Instructions
 
 1. Run the application: `python app.py` 🚀
-2. Follow the prompts to send your emails with ease! 📧
+2. Or you can use the github Action!
+3. Follow the prompts to send your emails with ease! 📧
 
 ## 🤝 Contributing Guidelines
 
