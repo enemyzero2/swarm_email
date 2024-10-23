@@ -4,7 +4,7 @@ import functions as ft
 import os
 from receive_email import receive_emails
 
-BASE_MODEL = 'gpt-4o-mini'
+BASE_MODEL = 'gpt-4o-2024-08-06'
 
 #读取本地文件SYDNEY.txt,转换为str:sydney_prompt
 with open(os.path.join(os.path.dirname(__file__),"SYDNEY.txt"),'r',encoding='utf-8') as f:
