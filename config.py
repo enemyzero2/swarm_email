@@ -1,3 +1,4 @@
+
 import os
 
 smtp_server = 'smtp.163.com'
@@ -20,3 +21,4 @@ mysql_host = os.getenv('MYSQL_HOST')
 mysql_user = os.getenv('MYSQL_USER')
 mysql_password = os.getenv('MYSQL_PASSWORD')
 mysql_db = os.getenv('MYSQL_DB')
+

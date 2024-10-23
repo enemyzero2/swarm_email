@@ -54,6 +54,7 @@ def receive_emails():
     target_sender = config.target_sender
     filtered_emails = filter_emails_by_date_and_sender(email_list, today, target_sender)
     email_contents = [extract_email_content(email) for email in filtered_emails]
+    #print(email_contents)  # Add this line for debugging
     return email_contents
 
 

@@ -18,7 +18,7 @@ def run_agent_conversion():
     combined_content = "\n\n".join(
         [f"第 {i+1} 封邮件内容:\n{content}" for i, content in enumerate(email_contents)]
     )
-
+    #print(combined_content)
     # 只调用一次 swarm_client.run()
     response = swarm_client.run(
         agent=agent_b,
