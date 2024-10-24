@@ -10,7 +10,13 @@ from models import CalendarEvent
 import mysql.connector
 from config import mysql_host, mysql_user, mysql_password, mysql_db
 
-def send_email(main_text: str):
+def send_email(main_text: str) -> None:
+    """
+    Send an email with the given main text.
+
+    Args:
+        main_text (str): The main text of the email.
+    """
     try:
         # 发件人和收件人信息
         sender_name = 'sydney'
@@ -35,7 +41,13 @@ def send_email(main_text: str):
     except Exception as e:
         print("Failed to send email. Error: {}".format(e))
 
-def connect_to_db():
+def connect_to_db() -> mysql.connector.connection.MySQLConnection:
+    """
+    Connect to the MySQL database.
+
+    Returns:
+        mysql.connector.connection.MySQLConnection: A connection to the MySQL database.
+    """
     return mysql.connector.connect(
         host=mysql_host,
         user=mysql_user,
@@ -43,7 +55,13 @@ def connect_to_db():
         database=mysql_db
     )
 
-def add_event_to_db(event: CalendarEvent):
+def add_event_to_db(event: CalendarEvent) -> None:
+    """
+    Add an event to the database.
+
+    Args:
+        event (CalendarEvent): The event to be added to the database.
+    """
     db = connect_to_db()
     cursor = db.cursor()
     query = "INSERT INTO events (name, date, participants, more_info) VALUES (%s, %s, %s, %s)"
@@ -53,7 +71,13 @@ def add_event_to_db(event: CalendarEvent):
     cursor.close()
     db.close()
 
-def get_events_from_db():
+def get_events_from_db() -> list[CalendarEvent]:
+    """
+    Get events from the database.
+
+    Returns:
+        list[CalendarEvent]: A list of events retrieved from the database.
+    """
     db = connect_to_db()
     cursor = db.cursor()
     query = "SELECT name, date, participants, more_info FROM events"
