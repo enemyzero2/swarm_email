@@ -7,7 +7,7 @@ from email.utils import formataddr
 from email.mime.multipart import MIMEMultipart
 from config import smtp_server, smtp_port, sender_email, sender_password, recipient_email, send_subject, send_name
 
-def send_email(main_text: str, attachments: list = None):
+def send_email(main_text: str):
     try:
         # 发件人和收件人信息
         sender_name = 'sydney'
@@ -21,19 +21,6 @@ def send_email(main_text: str, attachments: list = None):
 
         # 添加邮件正文
         message.attach(MIMEText(main_text, 'plain', 'utf-8'))
-
-        # 添加附件
-        if attachments:
-            for file_path in attachments:
-                with open(file_path, 'rb') as attachment:
-                    part = MIMEBase('application', 'octet-stream')
-                    part.set_payload(attachment.read())
-                    encoders.encode_base64(part)
-                    part.add_header(
-                        'Content-Disposition',
-                        f'attachment; filename= {file_path}',
-                    )
-                    message.attach(part)
 
         # 连接到 SMTP 服务器并发送邮件
         smtp_connection = smtplib.SMTP(smtp_server, smtp_port)
