@@ -56,5 +56,6 @@ def receive_emails():
     email_contents = [extract_email_content(email) for email in filtered_emails]
     #print(email_contents)  # Add this line for debugging
     return email_contents
+receive_emails.__doc__ = "接收来自主人的邮件"
 
 
