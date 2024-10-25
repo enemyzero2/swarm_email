@@ -25,7 +25,7 @@ def add_event_to_db(event: CalendarEvent) -> None:
     """
     db = connect_to_db()
     cursor = db.cursor()
-    query = "INSERT INTO events (name, date, participants, more_info) VALUES (%s, %s, %s, %s)"
+    query = "INSERT INTO calendar_events (name, date, participants, more_info) VALUES (%s, %s, %s, %s)"
     values = (event.name, event.date, ','.join(event.participants), event.more_info)
     cursor.execute(query, values)
     db.commit()
@@ -41,7 +41,7 @@ def get_events_from_db() -> list[CalendarEvent]:
     """
     db = connect_to_db()
     cursor = db.cursor()
-    query = "SELECT name, date, participants, more_info FROM events"
+    query = "SELECT name, date, participants, more_info FROM calendar_events"
     cursor.execute(query)
     events = []
     for (name, date, participants, more_info) in cursor:
@@ -49,7 +49,7 @@ def get_events_from_db() -> list[CalendarEvent]:
             name=name,
             date=date,
             participants=participants.split(','),
-            more_info=more_info
+            more_info=more_info if more_info else 'None'
         )
         events.append(event)
     cursor.close()

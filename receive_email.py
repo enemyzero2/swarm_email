@@ -84,10 +84,26 @@ def extract_email_content(email: parser.Parser) -> str:
 
 def receive_emails() -> list:
     """
-    Receive emails from the POP3 server.
+    Receives emails from the POP3 server and filters them based on the current date and target sender.
+
+    This function connects to a POP3 server, retrieves all available emails, and filters the list of emails by 
+    checking if the sender matches the specified target sender and if the email was sent on the current date.
+    It returns a list of the contents of the filtered emails.
+
+    Args:
+        None
 
     Returns:
-        list: A list of email contents.
+        list: A list of strings, where each string is the content of an email that matches the criteria.
+        
+    Raises:
+        ConnectionError: If the connection to the POP3 server fails.
+        ValueError: If the filtering criteria are not properly defined.
+
+    Example:
+        >>> emails = receive_emails()
+        >>> print(emails)
+        ['Email 1 content', 'Email 2 content']
     """
     server = connect_to_pop3_server()
     email_list = retrieve_emails(server)
